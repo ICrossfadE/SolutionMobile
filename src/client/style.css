@@ -7,6 +7,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline; 
 }
 
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    margin: 0px 30px;
+}
+
 .wrapper {
     height: 100vh;
     display: flex;
@@ -32,16 +44,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     align-items: center;
     justify-content: center;
     position: relative;
+    margin: 0px 20px;
 }
 
-.submit-booton {
+.start-booton {
     z-index: 1;
     margin: 0 auto;
     position: absolute;
 }
 
 .modal_window {
-    display: none;
     height: 250px;
     width: 500px;
     background: #000;
