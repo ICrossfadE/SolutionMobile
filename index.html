@@ -18,13 +18,11 @@
         <button class="start-booton">START</button>
         
         <div class="midl_box">
-            
+            <!-- oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" -->
             <div class="modal_window hidden">
                 <form class="form">
-                    <h1 class="modal_window-quest">200 + 200 = </h1>
-                    <input class="input-submit" 
-                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                    type="number" maxlength="3" name="number" autocomplete="off" usesubmitbehavior="false">
+                    <h1 class="modal_window-quest"></h1>
+                    <input class="input-submit" type="string" maxlength="3" name="number" autocomplete="off" usesubmitbehavior="false">
                 </form>
                 <button class="submit-booton">SUBMIT</button>
             </div>
