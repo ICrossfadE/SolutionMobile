@@ -1,14 +1,15 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  
-    margin: 0;  
-    padding: 0;  
-    border: 0;  
-    font-size: 100%;  
-    font: inherit;  
-    vertical-align: baseline; 
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .active {
     display: block;
+    display: flex;
 }
 
 .hidden {
@@ -25,6 +26,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header {
@@ -40,7 +42,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .midl_box {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     position: relative;
@@ -48,14 +50,90 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .start-booton {
-    z-index: 1;
+    z-index: 0;
     margin: 0 auto;
+    position: absolute;
+    height: 68px;
+    top: 45%;
+    bottom: 45%;
+    border: none;
+    padding: 20px 60px;
+    border-radius: 12px;
+    background-color: #D4F6CC;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    transition: all .2s ease;
+}
+
+.start-booton:hover {
+    transition: all .2s ease;
+    background-color: #3CCF4E;
+}
+
+.submit-booton {
+    border: none;
+    padding: 30px 0;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+
+.modal_window-background {
+    background-color: black;
+    opacity: .8;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
 }
 
 .modal_window {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
     height: 250px;
-    width: 500px;
-    background: #000;
+    width: 90vw;
+    background: #EF5B0C;
+    border-radius: 16px;
+    overflow: hidden;
     z-index: 2;
 }
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+
+.modal_window-quest {
+    font-size: 42px;
+}
+
+.input-submit {
+    width: 25%;
+    height: 42px;
+    margin-left: 15px;
+    font-weight: 700;
+    line-height: 42px;
+    font-size: 42px;
+    text-align: center;
+    
+    border: none;
+    background-color: transparent;
+    border-radius: 2px;
+    border-bottom: 4px solid rgba(15,15,15 ,.3);
+    transition: all .4s ease;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-submit:focus  {
+    color: rgba(15,15,15 ,1);
+    border-bottom: 4px solid rgba(15,15,15 ,1);
+    transition: all .4s ease;
+  }

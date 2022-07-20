@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/client/style.css">
     <link rel="stylesheet" href="/src/client/media.css">
+    <link rel="stylesheet" href="/src/client/normalize.css">
     <title>Selution</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="header"></div>
-
+        <div class="modal_window-background hidden"></div>
+        <button class="start-booton">START</button>
+        
         <div class="midl_box">
-            <button class="start-booton">START</button>
-
+            
             <div class="modal_window hidden">
+                <form class="form">
+                    <h1 class="modal_window-quest">200 + 200 = </h1>
+                    <input class="input-submit" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type="number" maxlength="3" name="number" autocomplete="off" usesubmitbehavior="false">
+                </form>
                 <button class="submit-booton">SUBMIT</button>
             </div>
+
         </div>
         
         <div class="footer"></div>

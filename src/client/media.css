@@ -1,6 +1,26 @@
-@media (max-width: 576px) {
-   
+@media (min-width: 640px) {
+    .modal_window-quest {
+        font-size: 56px;
+    }
+    
+    .input-submit {
+        width: 180px;
+        height: 64px;
+        line-height: 56px;
+        font-size: 56px;
+        border-radius: 2px;
+        
+        border-bottom: 5px solid rgba(15,15,15 ,.3);
+        transition: all .4s ease;
+    }
+    
+    .input-submit:focus  {
+        color: rgba(15,15,15 ,1);
+        border-bottom: 5px solid rgba(15,15,15 ,1);
+        transition: all .4s ease;
+      }
  };
-@media (max-width: 768px) { };
-@media (max-width: 992px) { };
-@media (max-width: 1200px) { };
+@media (min-width: 768px) { };
+@media (min-width: 1024px) { };
+@media (min-width: 1280px) { };
+@media (min-width: 1536px) { };
