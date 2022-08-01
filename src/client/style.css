@@ -1,129 +1,143 @@
 * {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .active {
-    display: block;
-    display: flex;
+  display: block;
+  display: flex;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .container {
-    margin: 0px 30px;
+  margin: 0px 30px;
 }
 
 .wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .header {
-    width: 100%;
-    height: 100px;
-    background-color: #3CCF4E;
+  width: 100%;
+  height: 100px;
+  background-color: #3ccf4e;
 }
 
 .footer {
-    width: 100%;
-    height: 100px;
-    background-color: #003865;
+  width: 100%;
+  height: 100px;
+  background-color: #003865;
 }
 
 .midl_box {
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 0px 20px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0px 20px;
 }
 
 .start-booton {
-    z-index: 0;
-    margin: 0 auto;
-    position: absolute;
-    height: 68px;
-    top: 45%;
-    bottom: 45%;
-    border: none;
-    padding: 20px 60px;
-    border-radius: 12px;
-    background-color: #D4F6CC;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 24px;
-    transition: all .2s ease;
+  z-index: 0;
+  margin: 0 auto;
+  position: absolute;
+  height: 68px;
+  top: 45%;
+  bottom: 45%;
+  border: none;
+  padding: 20px 60px;
+  border-radius: 12px;
+  background-color: #d4f6cc;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  transition: all 0.2s ease;
 }
 
 .start-booton:hover {
-    transition: all .2s ease;
-    background-color: #3CCF4E;
+  transition: all 0.2s ease;
+  background-color: #3ccf4e;
 }
 
 .submit-booton {
-    border: none;
-    padding: 30px 0;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all .2s ease;
+  border: none;
+  padding: 30px 0;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease;
 }
 
 .modal_window-background {
-    background-color: black;
-    opacity: .8;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+  background-color: black;
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
 
 .modal_window {
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
-    height: 250px;
-    width: 90vw;
-    background: #EF5B0C;
-    border-radius: 16px;
-    overflow: hidden;
-    z-index: 2;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+  width: 90vw;
+  background: #ef5b0c;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 .modal_window-quest {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 .input-submit {
-    width: 25%;
-    height: 42px;
-    margin-left: 15px;
-    font-weight: 700;
-    line-height: 42px;
-    font-size: 42px;
-    text-align: center;
-    
-    border: none;
-    background-color: transparent;
-    border-radius: 2px;
-    border-bottom: 4px solid rgba(15,15,15 ,.3);
-    transition: all .4s ease;
+  width: 25%;
+  height: 42px;
+  margin-left: 15px;
+  font-weight: 700;
+  line-height: 42px;
+  font-size: 42px;
+  text-align: center;
+
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border-bottom: 4px solid rgba(15, 15, 15, 0.3);
+  transition: all 0.4s ease;
+}
+
+.game-life {
+  display: flex;
+  flex-direction: row;
+}
+
+.life {
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+  margin: 10px;
 }
 
 input::-webkit-outer-spin-button,
@@ -132,8 +146,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.input-submit:focus  {
-    color: rgba(15,15,15 ,1);
-    border-bottom: 4px solid rgba(15,15,15 ,1);
-    transition: all .4s ease;
-  }
+.input-submit:focus {
+  color: rgba(15, 15, 15, 1);
+  border-bottom: 4px solid rgba(15, 15, 15, 1);
+  transition: all 0.4s ease;
+}

@@ -1,4 +1,4 @@
-import './domElements';
-import './showModalWindow';
-import './createNumbers';
-import './startGame';
+import "./domElements";
+import "./modalWindow";
+import "./createNumbers";
+import "./startGame";
