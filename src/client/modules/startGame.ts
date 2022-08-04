@@ -11,11 +11,11 @@ import {
 } from "./domElements";
 
 //Functions
-import { showPlayWindow, decrementGameLife, restartGame } from "./modalWindow";
+import { showPlayWindow, decrementGameLife, createGamelife } from "./modalWindow";
 import { addHtmlText, initStart } from "./createNumbers";
 
 startButton.addEventListener("click", (e) => {
-  restartGame(lifeCounter, lifes);
+  createGamelife(lifeCounter, lifes);
 
   showPlayWindow(modalWindow);
   showPlayWindow(bacgroundModalWindow);

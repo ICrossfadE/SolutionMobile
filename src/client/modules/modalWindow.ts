@@ -8,7 +8,7 @@ export function hiddenPlayWindow(elem: HTMLElement) {
   elem.classList.remove("active");
 }
 
-export function restartGame(elem: HTMLElement, gameLifes: Node[]) {
+export function createGamelife(elem: HTMLElement, gameLifes: Node[]) {
   const div = document.createElement("div");
   div.classList.add("life");
 
