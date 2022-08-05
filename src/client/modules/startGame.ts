@@ -29,10 +29,6 @@ submitButton.addEventListener("click", (e) => {
   if (status) {
     inputSubmitNumber.value = "";
   } else {
-    console.log(lifes);
-
-    decrementGameLife(lifes, modalWindow, bacgroundModalWindow);
-    // hiddenPlayWindow(modalWindow);
-    // hiddenPlayWindow(bacgroundModalWindow);
+    decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow);
   }
 });

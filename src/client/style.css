@@ -1,5 +1,6 @@
 * {
   font-family: "Quicksand", sans-serif;
+  transition: all 0.2s ease;
 }
 
 :active,
@@ -129,15 +130,22 @@
 }
 
 .game-life {
+  max-width: 60%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
 }
 
 .life {
-  width: 10px;
-  height: 10px;
+  width: 80px;
+  height: 15px;
   background-color: brown;
   margin: 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 input::-webkit-outer-spin-button,
