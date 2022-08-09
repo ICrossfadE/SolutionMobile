@@ -3,6 +3,10 @@
   transition: all 0.2s ease;
 }
 
+body {
+  background-color: #f8f8f8f8;
+}
+
 :active,
 :hover,
 :focus {
@@ -35,7 +39,7 @@
 .header {
   width: 100%;
   height: 100px;
-  background-color: #3ccf4e;
+  background-color: #89ccc5;
 }
 
 .footer {
@@ -62,7 +66,7 @@
   border: none;
   padding: 20px 60px;
   border-radius: 12px;
-  background-color: #d4f6cc;
+  background-color: #d7ebe9;
   cursor: pointer;
   font-weight: 700;
   font-size: 24px;
@@ -71,7 +75,12 @@
 
 .start-booton:hover {
   transition: all 0.2s ease;
-  background-color: #3ccf4e;
+  background-color: #89ccc5;
+}
+
+.submit-booton:hover {
+  transition: all 0.2s ease;
+  background-color: #89ccc5;
 }
 
 .submit-booton {
@@ -80,6 +89,7 @@
   cursor: pointer;
   font-weight: 700;
   transition: all 0.2s ease;
+  background-color: #d7ebe9;
 }
 
 .modal_window-background {
@@ -96,8 +106,9 @@
   justify-content: space-between;
   height: 250px;
   width: 90vw;
-  background: #ef5b0c;
+  background: #272727;
   border-radius: 16px;
+  box-shadow: 2px 2px 90px rgba(0, 0, 0, 0.8);
   overflow: hidden;
   z-index: 2;
 }
@@ -111,6 +122,7 @@
 
 .modal_window-quest {
   font-size: 42px;
+  color: #f8f8f8f8;
 }
 
 .input-submit {
@@ -121,11 +133,12 @@
   line-height: 42px;
   font-size: 42px;
   text-align: center;
+  color: #f8f8f8f8;
 
   border: none;
   background-color: transparent;
   border-radius: 2px;
-  border-bottom: 4px solid rgba(15, 15, 15, 0.3);
+  border-bottom: 4px solid rgb(248, 248, 248, 0.3);
   transition: all 0.4s ease;
 }
 
@@ -134,15 +147,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #f0f0f0;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px;
   margin: 0 auto;
+  margin-bottom: 20px;
+
+  background-color: #f8f8f8f8;
 }
 
 .life {
   width: 80px;
   height: 15px;
-  background-color: brown;
+  background-color: #fc270b;
+  box-shadow: 0 0 1em #fc270b;
   margin: 10px;
   border-radius: 10px;
   transition: all 0.2s ease;
@@ -155,7 +171,6 @@ input::-webkit-inner-spin-button {
 }
 
 .input-submit:focus {
-  color: rgba(15, 15, 15, 1);
-  border-bottom: 4px solid rgba(15, 15, 15, 1);
+  border-bottom: 4px solid rgb(248, 248, 248);
   transition: all 0.4s ease;
 }
