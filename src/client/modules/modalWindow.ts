@@ -3,7 +3,7 @@ export function showPlayWindow(elem: HTMLElement): void {
   elem.classList.remove("hidden");
 }
 
-export function hiddenPlayWindow(elem: HTMLElement): void {
+export function hidePlayWindow(elem: HTMLElement): void {
   elem.classList.add("hidden");
   elem.classList.remove("active");
 }
@@ -34,7 +34,7 @@ export function decrementGameLife(gameLifes: Node[], elem: HTMLElement, elem1: H
 
   //hidden Modal window
   if (!Boolean(gameLifes.length)) {
-    hiddenPlayWindow(elem1);
-    hiddenPlayWindow(elem2);
+    hidePlayWindow(elem1);
+    hidePlayWindow(elem2);
   }
 }

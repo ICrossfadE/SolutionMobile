@@ -14,7 +14,7 @@ import {
 import { showPlayWindow, decrementGameLife, createGamelife } from "./modalWindow";
 import { addHtmlText, initStart } from "./createNumbers";
 
-startButton.addEventListener("click", (e) => {
+startButton.addEventListener("click", (event: MouseEvent) => {
   createGamelife(lifeCounter, lifes);
 
   showPlayWindow(modalWindow);
@@ -23,8 +23,8 @@ startButton.addEventListener("click", (e) => {
   addHtmlText(stringRandomNumbers);
 });
 
-submitButton.addEventListener("click", (e) => {
-  let status = initStart(stringRandomNumbers, inputSubmitNumber);
+submitButton.addEventListener("click", (event: MouseEvent) => {
+  const status = initStart(stringRandomNumbers, inputSubmitNumber);
   console.log(status);
   if (status) {
     inputSubmitNumber.value = "";

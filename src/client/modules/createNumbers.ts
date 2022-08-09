@@ -2,28 +2,32 @@
 
 type Operator = "+" | "-";
 
-let twoNumber: number[] = getTwoNumbers();
+let twoNumber: [number, number] = getTwoNumbers();
 let gameOperator: Operator = getRandomOperator();
 let totalSum: number = total(twoNumber, gameOperator);
 
+//(- || +)
 function getRandomOperator(): Operator {
   const operators: Operator[] = ["-", "+"];
   const index = generateRandomInt(0, operators.length - 1);
   return operators[index];
 }
 
+// 0 - 1
 function generateRandomInt(min: number, max: number): number {
-  return Math.floor(Math.random() * (max + 1 - min) + min); // 0 - 1
+  return Math.floor(Math.random() * (max + 1 - min) + min);
 }
 
-function getTwoNumbers(): number[] {
+//number1 - 1-100
+//number2 - 1-100
+function getTwoNumbers(): [number, number] {
   const num1 = generateRandomInt(1, 100);
   const num2 = generateRandomInt(1, 100);
 
   return [num1, num2];
 }
 
-function total([number1, number2]: number[], operator: Operator): number {
+function total([number1, number2]: [number, number], operator: Operator): number {
   if (operator == "+") {
     return number1 + number2;
   } else {
@@ -33,10 +37,9 @@ function total([number1, number2]: number[], operator: Operator): number {
 
 export function addHtmlText(elem: HTMLHeadingElement): void {
   elem.textContent = createHtmlText(gameOperator, twoNumber);
-  console.log("TOTAL", totalSum);
 }
 
-function createHtmlText(operator: Operator, [number1, number2]: number[]): string {
+function createHtmlText(operator: Operator, [number1, number2]: [number, number]): string {
   return `${number1}${operator}${number2}`;
 }
 
@@ -46,14 +49,13 @@ function createNewTask(taskElem: HTMLHeadingElement): void {
   totalSum = total(twoNumber, gameOperator);
 
   console.log("TOTAL", totalSum);
-
-  taskElem.textContent = createHtmlText(gameOperator, twoNumber);
+  addHtmlText(taskElem);
 }
 
 export function initStart(elem: HTMLHeadingElement, input: HTMLInputElement): boolean {
   let inputValue = Number(input.value);
 
-  if (!(inputValue === 0) && inputValue === totalSum) {
+  if (inputValue === totalSum) {
     console.log("ok");
     createNewTask(elem);
     return true;
