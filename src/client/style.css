@@ -15,8 +15,13 @@ body {
 }
 
 .active {
-  display: block;
   display: flex;
+}
+
+.active-score {
+  display: block;
+  animation-duration: 2s;
+  animation-name: showScore;
 }
 
 .hidden {
@@ -55,6 +60,16 @@ body {
   margin-left: 20px;
 }
 
+.user-expireans {
+  margin: 0 auto;
+  text-align: center;
+
+  color: #f8f8f8f8;
+  font-size: 60px;
+  font-weight: 700;
+  opacity: 1;
+}
+
 .user_local-score {
   margin-right: 20px;
 }
@@ -66,9 +81,6 @@ body {
 }
 
 .midl_box {
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
   position: relative;
   margin: 0px 20px;
 }
@@ -166,6 +178,7 @@ body {
   justify-content: space-around;
   border-radius: 15px;
   margin: 0 auto;
+  margin-top: 50px;
   margin-bottom: 20px;
 
   background-color: #f8f8f8f8;
@@ -190,4 +203,18 @@ input::-webkit-inner-spin-button {
 .input-submit:focus {
   border-bottom: 4px solid rgb(248, 248, 248);
   transition: all 0.4s ease;
+}
+
+@keyframes showScore {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    color: #59ce8f;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

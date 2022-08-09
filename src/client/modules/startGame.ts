@@ -6,12 +6,13 @@ import {
   modalWindow,
   bacgroundModalWindow,
   stringRandomNumbers,
+  userScore,
   lifeCounter,
   lifes,
 } from "./domElements";
 
 //Functions
-import { showPlayWindow, hidePlayWindow, decrementGameLife, createGamelife } from "./modalWindow";
+import { showPlayWindow, hidePlayWindow, decrementGameLife, createGamelife, showUserScor } from "./modalWindow";
 import { addHtmlText, initStart } from "./createNumbers";
 
 startButton.addEventListener("click", (event: MouseEvent) => {
@@ -28,6 +29,7 @@ submitButton.addEventListener("click", (event: MouseEvent) => {
   const status = initStart(stringRandomNumbers, inputSubmitNumber);
   console.log(status);
   if (status) {
+    showUserScor(userScore);
     inputSubmitNumber.value = "";
   } else {
     decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow, startButton);

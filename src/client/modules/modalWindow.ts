@@ -8,6 +8,15 @@ export function hidePlayWindow(elem: HTMLElement): void {
   elem.classList.remove("active");
 }
 
+export function showUserScor(elem: HTMLElement) {
+  elem.classList.add("active-score");
+  elem.classList.remove("hidden");
+  setTimeout(() => {
+    elem.classList.add("hidden");
+    elem.classList.remove("active-score");
+  }, 2000);
+}
+
 export function createGamelife(elem: HTMLElement, gameLifes: Node[]): void {
   for (let i = 0; i >= gameLifes.length; i++) {
     const div = document.createElement("div");
@@ -32,6 +41,7 @@ export function decrementGameLife(
   botton: HTMLButtonElement
 ): void {
   //delete
+
   gameLifes.pop();
   elem.firstChild.remove();
 
