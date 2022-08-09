@@ -24,7 +24,13 @@ export function createGamelife(elem: HTMLElement, gameLifes: Node[]): void {
   console.log("start", gameLifes);
 }
 
-export function decrementGameLife(gameLifes: Node[], elem: HTMLElement, elem1: HTMLElement, elem2: HTMLElement): void {
+export function decrementGameLife(
+  gameLifes: Node[],
+  elem: HTMLElement,
+  elem1: HTMLElement,
+  elem2: HTMLElement,
+  botton: HTMLButtonElement
+): void {
   //delete
   gameLifes.pop();
   elem.firstChild.remove();
@@ -36,5 +42,6 @@ export function decrementGameLife(gameLifes: Node[], elem: HTMLElement, elem1: H
   if (!Boolean(gameLifes.length)) {
     hidePlayWindow(elem1);
     hidePlayWindow(elem2);
+    showPlayWindow(botton);
   }
 }

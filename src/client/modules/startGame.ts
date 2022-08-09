@@ -11,7 +11,7 @@ import {
 } from "./domElements";
 
 //Functions
-import { showPlayWindow, decrementGameLife, createGamelife } from "./modalWindow";
+import { showPlayWindow, hidePlayWindow, decrementGameLife, createGamelife } from "./modalWindow";
 import { addHtmlText, initStart } from "./createNumbers";
 
 startButton.addEventListener("click", (event: MouseEvent) => {
@@ -19,6 +19,7 @@ startButton.addEventListener("click", (event: MouseEvent) => {
 
   showPlayWindow(modalWindow);
   showPlayWindow(bacgroundModalWindow);
+  hidePlayWindow(startButton);
 
   addHtmlText(stringRandomNumbers);
 });
@@ -29,6 +30,6 @@ submitButton.addEventListener("click", (event: MouseEvent) => {
   if (status) {
     inputSubmitNumber.value = "";
   } else {
-    decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow);
+    decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow, startButton);
   }
 });

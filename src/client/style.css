@@ -37,9 +37,26 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100px;
   background-color: #89ccc5;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.test {
+  background-color: #89ccc5;
+}
+
+.user {
+  margin-left: 20px;
+}
+
+.user_local-score {
+  margin-right: 20px;
 }
 
 .footer {
