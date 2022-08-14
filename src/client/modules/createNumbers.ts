@@ -35,6 +35,14 @@ function total([number1, number2]: [number, number], operator: Operator): number
   }
 }
 
+export function scoreTotal(userScore: number, elem: HTMLDivElement): number {
+  const experiencePoint = 25;
+
+  elem.textContent = `${String((userScore += experiencePoint))} xp`;
+
+  return userScore;
+}
+
 export function addHtmlText(elem: HTMLHeadingElement): void {
   elem.textContent = createHtmlText(gameOperator, twoNumber);
 }

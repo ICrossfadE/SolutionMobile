@@ -13,7 +13,8 @@ export const bacgroundModalWindow: HTMLDivElement = document.querySelector(".mod
 export const stringRandomNumbers: HTMLHeadingElement = document.querySelector(".modal_window-quest");
 
 //Game Sore
-export const userScore: HTMLDivElement = document.querySelector(".user-expireans");
+export const userGameScore: HTMLDivElement = document.querySelector(".user_local-score");
+export const gameScore: HTMLDivElement = document.querySelector(".game_score");
 
 //Game Lifes
 export const lifeCounter: HTMLDivElement = document.querySelector(".game-life");

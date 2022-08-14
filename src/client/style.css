@@ -59,9 +59,16 @@ body {
 .user {
   margin-left: 20px;
 }
+.game_score-box {
+  display: flex;
+  height: 60px;
+  justify-content: center;
+}
 
-.user-expireans {
-  margin: 0 auto;
+.game_score {
+  top: 18%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 
   color: #f8f8f8f8;
