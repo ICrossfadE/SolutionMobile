@@ -17,8 +17,6 @@ export function showUserScor(elem: HTMLElement): void {
   }, 2000);
 }
 export function showBacgroundColor(elem: HTMLElement): void {
-  console.log("add", elem);
-
   elem.classList.add("active-baground");
   setTimeout(() => {
     elem.classList.remove("active-baground");
@@ -37,8 +35,6 @@ export function createGamelife(elem: HTMLElement, gameLifes: Node[]): void {
 
     if (i === 2) break;
   }
-
-  // console.log("start", gameLifes);
 }
 
 export function decrementGameLife(
@@ -52,9 +48,6 @@ export function decrementGameLife(
 
   gameLifes.pop();
   elem.firstChild.remove();
-
-  // console.log(gameLifes);
-  // console.log(Boolean(gameLifes.length));
 
   //hidden Modal window
   if (!Boolean(gameLifes.length)) {

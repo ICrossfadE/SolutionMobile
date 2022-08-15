@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node src/server/server.js"
+    "start": "node src/server/server.js",
+    "build": "webpack"
   },
   "devDependencies": {
     "ts-loader": "^9.3.1",

@@ -39,7 +39,13 @@ submitButton.addEventListener("click", (event: MouseEvent) => {
     inputSubmitNumber.value = "";
   } else {
     showBacgroundColor(bacgroundModalWindow);
-
     decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow, startButton);
+  }
+});
+
+inputSubmitNumber.addEventListener("keydown", (event: KeyboardEvent) => {
+  if (event.keyCode == 13) {
+    event.preventDefault();
+    return false;
   }
 });
