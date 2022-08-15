@@ -24,6 +24,11 @@ body {
   animation-name: showScore;
 }
 
+.active-baground {
+  animation-duration: 0.5s;
+  animation-name: addBgroundColor;
+}
+
 .hidden {
   display: none;
 }
@@ -50,6 +55,7 @@ body {
   background-color: #89ccc5;
   font-weight: 700;
   font-size: 18px;
+  color: #272727;
 }
 
 .test {
@@ -223,5 +229,18 @@ input::-webkit-inner-spin-button {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes addBgroundColor {
+  from {
+    background-color: black;
+  }
+  50% {
+    background-color: #eb1d36;
+    opacity: 0.8;
+  }
+  to {
+    background-color: black;
   }
 }

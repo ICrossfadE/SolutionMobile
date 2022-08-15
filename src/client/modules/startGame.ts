@@ -13,7 +13,7 @@ import {
 } from "./domElements";
 
 //Functions
-import { showPlayWindow, hidePlayWindow, decrementGameLife, createGamelife, showUserScor } from "./modalWindow";
+import { showPlayWindow, hidePlayWindow, decrementGameLife, createGamelife, showUserScor, showBacgroundColor } from "./modalWindow";
 import { addHtmlText, initStart, scoreTotal } from "./createNumbers";
 
 let userScore = 0;
@@ -34,10 +34,12 @@ submitButton.addEventListener("click", (event: MouseEvent) => {
   if (status) {
     showUserScor(gameScore);
     userScore = scoreTotal(userScore, userGameScore);
-    console.log(userScore);
+    // console.log(userScore);
 
     inputSubmitNumber.value = "";
   } else {
+    showBacgroundColor(bacgroundModalWindow);
+
     decrementGameLife(lifes, lifeCounter, modalWindow, bacgroundModalWindow, startButton);
   }
 });

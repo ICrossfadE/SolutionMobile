@@ -64,11 +64,11 @@ export function initStart(elem: HTMLHeadingElement, input: HTMLInputElement): bo
   let inputValue = Number(input.value);
 
   if (inputValue === totalSum) {
-    console.log("ok");
+    // console.log("ok");
     createNewTask(elem);
     return true;
   } else {
-    console.log("no");
+    // console.log("no");
     input.value = "";
     createNewTask(elem);
     return false;

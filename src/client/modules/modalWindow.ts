@@ -8,7 +8,7 @@ export function hidePlayWindow(elem: HTMLElement): void {
   elem.classList.remove("active");
 }
 
-export function showUserScor(elem: HTMLElement) {
+export function showUserScor(elem: HTMLElement): void {
   elem.classList.add("active-score");
   elem.classList.remove("hidden");
   setTimeout(() => {
@@ -16,13 +16,21 @@ export function showUserScor(elem: HTMLElement) {
     elem.classList.remove("active-score");
   }, 2000);
 }
+export function showBacgroundColor(elem: HTMLElement): void {
+  console.log("add", elem);
+
+  elem.classList.add("active-baground");
+  setTimeout(() => {
+    elem.classList.remove("active-baground");
+  }, 500);
+}
 
 export function createGamelife(elem: HTMLElement, gameLifes: Node[]): void {
   for (let i = 0; i >= gameLifes.length; i++) {
     const div = document.createElement("div");
     div.classList.add("life");
 
-    console.log("create", div);
+    // console.log("create", div);
     gameLifes.push(div);
 
     elem.appendChild(div);
@@ -30,23 +38,23 @@ export function createGamelife(elem: HTMLElement, gameLifes: Node[]): void {
     if (i === 2) break;
   }
 
-  console.log("start", gameLifes);
+  // console.log("start", gameLifes);
 }
 
 export function decrementGameLife(
   gameLifes: Node[],
   elem: HTMLElement,
   elem1: HTMLElement,
-  elem2: HTMLElement,
+  elem2: HTMLDivElement,
   botton: HTMLButtonElement
-): void {
+) {
   //delete
 
   gameLifes.pop();
   elem.firstChild.remove();
 
-  console.log(gameLifes);
-  console.log(Boolean(gameLifes.length));
+  // console.log(gameLifes);
+  // console.log(Boolean(gameLifes.length));
 
   //hidden Modal window
   if (!Boolean(gameLifes.length)) {
