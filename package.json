@@ -1,8 +1,6 @@
 {
   "scripts": {
-    "start": "node src/server/server.js",
-    "heroku-postbuild": "npm run build",
-    "build": "webpack"
+    "start": "node src/server/server.js"
   },
   "devDependencies": {
     "ts-loader": "^9.3.1",
